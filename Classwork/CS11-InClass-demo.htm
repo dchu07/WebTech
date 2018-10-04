@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>CS11 - Intro to JavaScript</title>
+
+        <style type="text/css">
+            /* h1 {
+                font-weight: bold;
+                background-color: Silver;
+            }
+
+            p {
+                text-align: center;
+            } */
+        </style>
+
+        <script type="text/javascript">
+            /* Your JavaScript goes here */
+            function change_BackgroundColor() {
+                //const bgColors = new Array("green", "yellow", "blue", "pink", "red", "orange");
+                //let n = bgColors.length;
+                //let randIndex = Math.floor(Math.random() * n);
+                //let b = document.getElementById("bodyA");
+                //b.style.backgroundColor = bgColors[randIndex];
+
+                //changinging background color
+                let e = document.getElementById("Cece");
+                e.style.backgroundColor = 'blue';
+                e.style.fontSize = "50px";
+            }
+
+            function enlarge_Img() {
+                let myimg = document.getElementById("imgB");
+                let w = myimg.style.width;
+                w = parseInt(w);
+                w = w + 30;
+                myimg.style.width = w + "px";
+            }
+
+            function c() {
+                let x = 2018;
+                let y =10;
+
+                x = x + y;
+
+                let result = x;
+                let d = Date();
+
+                alert("The result is" + results + ".What is the Date?" + d);
+
+                let r = document.getElementById("Cece");
+                r.innerHTML=d;
+            }
+
+            function capitalize(){
+                let x = documnent.getElementById("newP")
+                x.style.textTransform = "capitalize";
+            }
+        </script>
+    </head>
+
+    <body id="bodyA">
+        <hr />
+        <h1 id = "Cece" onclick="change_BackgroundColor()"> Don't Look - I am Changing</h1>
+        <hr />
+        <img id="imgB" src="Images/man.png" alt="man" style="width:30px" onmouseover="enlarge_Img()" />
+        <p>
+            <button onclick="c()">I dare you to click on me!</button>
+        </p>
+        <hr />
+
+        <p id="newP" onclick="capitalize()">
+            test the new paragraph;
+        </p>
+
+    </body>
+
+</html>
