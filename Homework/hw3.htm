@@ -16,14 +16,25 @@
                 margin-top: 50px;
             }
 
-            #leopard {
-                border: 15px ridge yellow;
-                width: 50%;
-            }
         </style>
 
-        <script type="text/javascrip">
-            
+        <script type="text/javascript">
+            function show(x) {
+                let i = document.getElementById("image1")
+
+                if (x == "shepard") {
+                    i.src = "Images/germanshepard.jpg";
+                }
+                if (x == "penguin") {
+
+                }
+                if (x == "lynx") {
+
+                }
+                if (x == "leopard") {
+
+                }
+            }
 
         </script>
 
@@ -32,13 +43,13 @@
 <body>
     <h1>Click on the Animal to see it</h1>
 
-    <button>Shepard</button>
+    <p><button onclick=show(this.id) id="shepard">Shepard<img id="image1" src=""></button></p>
 
-    <button>Penguin</button>
+    <p><button onclick=show(this.id) id="penguin">Penguin</button></p>
 
-    <button>Lynx</button>
+    <p><button onclick=show(this.id) id="lynx">Lynx</button></p>
 
-    <button>Leopard</button>
+    <p><button onclick=show(this.id) id="leopard">Leopard</button></p>
 
 </body>
 
