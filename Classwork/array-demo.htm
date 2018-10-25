@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Array Demo </title>
+
+    <script type="text/javascript">
+    function choose() {
+        let myForm = document.getElementById("form1");
+        let userChoice;
+        // if (myForm.colors[0].checked) {
+        //     userChoice = myForm.colors[0].value;
+        // }
+        // else if (myForm.colors[1].checked) {
+        //     userChoice = myForm.colors[1].value;
+        // }
+        // else if (myForm.colors[2].checked) {
+        //     userChoice = myForm.colors[2].value;
+        // }
+        // else if (myForm.colors[3].checked) {
+        //     userChoice = myForm.colors[3].value;
+        // }
+        // else {
+        //     userChoice = "nothing yet.";
+        // }
+
+        for(let i = 0; i<myForm.colors.length; i++){
+            if (myForm.colors[i].checked) {
+                userChoice = myForm.colors[i].value;
+            }
+            if (userChoice == "") {
+                userChoice = "nothing yet";
+            }
+        }
+
+        document.getElementById("choice").innerHTML = userChoice;
+        return false;
+
+        let tweetString = "";
+        const tweets = ["Hi everyone!", "I love Web Tech.", "I am working on my project.", "Have a nice day!"]
+
+        for (let i =0; i<tweets.length; i++) {
+            x = x + "<li>" + tweets[i] + "</li>";
+        }
+        document.getElementById("tweets").innerHTML = x;
+        return false;
+    }
+    </script>
+
+</head>
+
+<body>
+    <h1>Array Demo</h1>
+
+    <form action="" method="post" id="form1">
+            Red: <input type="radio" name="colors" value="red">
+            Blue: <input type="radio" name="colors" value="blue">
+            Yellow: <input type="radio" name="colors" value="yellow">
+            Green: <input type="radio" name="colors" value="green">
+            Brown: <input type="radio" name="colors" value="brown">
+
+            <button onclick=" return choose()"> Click Me!</button>
+            <input type="reset" value="clear"></button>
+    </form>
+    <p>You have chosen <span id="choice"></span></p>
+    <ol id="tweets"></ol>
+
+</body>
+
+</html>
