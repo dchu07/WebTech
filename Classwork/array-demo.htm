@@ -8,7 +8,7 @@
     <script type="text/javascript">
     function choose() {
         let myForm = document.getElementById("form1");
-        let userChoice;
+        let userChoice = "nothing yet";
         // if (myForm.colors[0].checked) {
         //     userChoice = myForm.colors[0].value;
         // }
@@ -29,15 +29,11 @@
             if (myForm.colors[i].checked) {
                 userChoice = myForm.colors[i].value;
             }
-            if (userChoice == "") {
-                userChoice = "nothing yet";
-            }
         }
 
         document.getElementById("choice").innerHTML = userChoice;
-        return false;
 
-        let tweetString = "";
+        let x = "";
         const tweets = ["Hi everyone!", "I love Web Tech.", "I am working on my project.", "Have a nice day!"]
 
         for (let i = 0; i<tweets.length; i++) {
