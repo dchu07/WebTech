@@ -21,9 +21,18 @@
         </style>
 
         <script type="text/javascript">
-        let myForm = document.getElementById("form1");
+        function choose() {
+            let myForm = document.getElementById("form1");
+            let userChoice;
+            for(let i = 0; i<myForm.colors.length; i++){
+                if (myForm.colors[i].checked) {
+                    userChoice = myForm.colors[i].value;
+                }
+            }
+            myForm.style.backgroundColor = userChoice;
             
-
+            return false;
+        }
         </script>
 
     </head>
@@ -51,7 +60,7 @@
                 <textarea name="result" cols="40" rows="4"></textarea>
             </p>
             <p>
-                <input type="submit" name="submit" value="Go!" />
+                <input onclick = "return choose()" type="submit" name="submit" value="Go!" />
                 <input type="reset" name="Reset" value="Clear!" />
             </p>
 
