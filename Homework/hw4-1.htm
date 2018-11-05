@@ -41,10 +41,10 @@
                 let wordOne = myForm.word1.value;
                 let wordTwo = myForm.word2.value;
                 let wordThree = myForm.word3.value;
-                if ((wordOne == 0) || (wordTwo == 0) || (wordThree == 0)) {
+                if ((wordOne == "") || (wordTwo == "") || (wordThree == "")) {
                     alert("All Fields Must be Selected")
                 }
-                else if ((wordOne != 0) && (wordTwo != 0) && (wordThree != 0)) {
+                else if ((wordOne != "") && (wordTwo != "") && (wordThree != "")) {
                     myForm.results.value = wordOne + " " + wordTwo + " " + wordThree;
                 }
                 return false;
