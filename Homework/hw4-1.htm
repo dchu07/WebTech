@@ -49,6 +49,18 @@
                 }
                 return false;
             }
+            
+            var w1 = ["I", "We", "They"];
+            var w2 = ["will", "can", "must"];
+            var w3 = ["eat.", "study.", "play."];
+            function random() {
+                var rn = [Math.floor(Math.random()*3)];
+
+                let myForm = document.getElementById("form1");
+                myForm.results.value = w1[rn] + " " + w2[rn] + " " + w3[rn];
+                
+                return false;
+            }
 
         </script>
     </head>
@@ -93,7 +105,7 @@
                 </select>
             </p>
             <p>
-                <select name="word3">
+                <select name="word3" onchange="return show()">
                     <option selected value="">Select Word 3</option>
                     <option value="eat."> eat.</option>
                     <option value="study."> study.</option>
@@ -101,7 +113,7 @@
                 </select>
             </p>
 
-            <button onclick="return show()">Random Sentence Generator</button>
+            <button onclick="return random()">Random Sentence Generator</button>
         </form>
 
     </body>
