@@ -50,11 +50,11 @@
                 return false;
             }
             
-            var w1 = ["I", "We", "They"];
-            var w2 = ["will", "can", "must"];
-            var w3 = ["eat.", "study.", "play."];
+            let w1 = ["I", "We", "They"];
+            let w2 = ["will", "can", "must"];
+            let w3 = ["eat.", "study.", "play."];
             function random() {
-                var rn = [Math.floor(Math.random()*3)];
+                let rn = [Math.floor(Math.random()*3)];
 
                 let myForm = document.getElementById("form1");
                 myForm.results.value = w1[rn] + " " + w2[rn] + " " + w3[rn];
