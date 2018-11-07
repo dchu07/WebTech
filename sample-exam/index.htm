@@ -10,13 +10,49 @@
                 font-weight: bold;
                 text-align: center;
             }
+            ul {
+                list-style-type: square;
+            }
+            ol {
+                list-style-type: lower-roman;
+                background-color: silver;
+                font-size: 1.5em;
+                font-display: cursive;
+                font-style: italic;
+                margin: 20px 250px;
+            }
+            body {
+                color: olive;
+            }
+
         </style>
+
+        <script type="text/javascript">
+            function orange(x) {
+                document.getElementById(x).style.backgroundColor = "orange";
+            }
+            function original(y) {
+                document.getElementById(y).style.backgroundColor = "silver";
+            }
+
+        </script>
 
     </head>
 
     <body>
         <!-- Your HTML goes here -->
         <h1> Summer 2017 Exam - Index Page</h1>
+        <ol >
+            <li onmouseover="orange(this.id)" onmouseout="original(this.id)"><a href="Q2.htm">Question 2</a>
+                <ul>
+                    <li onmouseover="orange(this.id)" onmouseout="original(this.id)">Retina Display</li>
+                    <li onmouseover="orange(this.id)">Criticism</li>
+                </ul>
+            </li>
+            <li onmouseover="orange(this.id)" onmouseout="original(this.id)"><a href="Q3.htm">Question 3</a></li>
+            <li onmouseover="orange(this.id)" onmouseout="original(this.id)"><a href="Q4.htm">Question 4</a></li>
+            <li onmouseover="orange(this.id)" onmouseout="original(this.id)"><a href="Q5.htm">Question 5</a></li>
+        </ol>
 
     </body>
 
