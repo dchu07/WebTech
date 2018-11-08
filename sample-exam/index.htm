@@ -4,37 +4,38 @@
     <head>
         <meta charset="UTF-8">
         <title>Exam - Index.htm</title>
+
         <style type="text/css">
             h1 {
                 font-family: Arial;
                 font-weight: bold;
                 text-align: center;
             }
-            ul {
-                list-style-type: square;
-            }
             ol {
-                list-style-type: lower-roman;
+                list-style-type: square;
                 background-color: silver;
-                font-size: 1.5em;
-                font-display: cursive;
-                font-style: italic;
-                margin: 20px 250px;
+                font: italic 1.5em Cursive;
+                margin: 0px 250px;
+                padding-left: 200px;
+                padding-top: 20px;
+                padding-bottom: 20px;
             }
-            body {
+            ul {
+                list-style-type: lower-roman;
+            }
+            body, a {
                 color: olive;
+                text-decoration: none;
             }
-
         </style>
 
         <script type="text/javascript">
             function orange(x) {
                 document.getElementById(x).style.backgroundColor = "orange";
             }
-            function original(y) {
+            function og(y) {
                 document.getElementById(y).style.backgroundColor = "silver";
             }
-
         </script>
 
     </head>
@@ -42,16 +43,16 @@
     <body>
         <!-- Your HTML goes here -->
         <h1> Summer 2017 Exam - Index Page</h1>
-        <ol >
-            <li onmouseover="orange(this.id)" onmouseout="original(this.id)"><a href="Q2.htm">Question 2</a>
-                <ul>
-                    <li onmouseover="orange(this.id)" onmouseout="original(this.id)">Retina Display</li>
-                    <li onmouseover="orange(this.id)">Criticism</li>
-                </ul>
-            </li>
-            <li onmouseover="orange(this.id)" onmouseout="original(this.id)"><a href="Q3.htm">Question 3</a></li>
-            <li onmouseover="orange(this.id)" onmouseout="original(this.id)"><a href="Q4.htm">Question 4</a></li>
-            <li onmouseover="orange(this.id)" onmouseout="original(this.id)"><a href="Q5.htm">Question 5</a></li>
+
+        <ol>
+            <li>Question 2</li>
+            <ul>
+                <li><a onmouseover="orange(this.id)" onmouseout="og(this.id)" id="q2-1" href="Q2.htm#retina">Retina Display</a></li>
+                <li><a onmouseover="orange(this.id)" onmouseout="og(this.id)" id="q2-2" href="Q2.htm#criticism">Criticism</a></li>
+            </ul>
+            <li><a onmouseover="orange(this.id)" onmouseout="og(this.id)" id="q3" href="Q3.htm">Question 3</a></li>
+            <li><a onmouseover="orange(this.id)" onmouseout="og(this.id)" id="q4" href="Q4.htm">Question 4</a></li>
+            <li><a onmouseover="orange(this.id)" onmouseout="og(this.id)" id="q5" href="Q5.htm">Question 5</a></li>
         </ol>
 
     </body>

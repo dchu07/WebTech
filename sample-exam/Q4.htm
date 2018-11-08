@@ -35,6 +35,25 @@
 		</style>
 
 		<script type="text/javascript">
+			function show(x) {
+				if (x == "celtics") {
+					document.getElementById("image1").src = "celtics.png";
+				}
+				else if (x == "patriots") {
+					document.getElementById("image1").src = "patriots.jpg";
+				}
+				return false;
+			}
+
+			function redBorder() {
+				let i = document.getElementById("image1");
+				i.style.border = "red 10px ridge";
+			}
+
+			function og() {
+				let i = document.getElementById("image1");
+				i.style.border = "3px dotted black";
+			}
 
 		</script>
 
@@ -53,11 +72,11 @@
 		</p>
 		<hr>
 		<p>
-			<img src="" alt="" title="This is the image" width="100" height="100" />
+			<img onmouseover="redBorder()" onmouseout="og()" src="" alt="" id="image1" title="This is the image" width="100" height="100" />
 		</p>
 		<p >
-			<input type="button" value="Celtics" />
-			<input type="button" value="Patriots" />
+			<input onclick="return show(this.id)" id="celtics" type="button" value="Celtics" />
+			<input onclick="return show(this.id)" id="patriots" type="button" value="Patriots" />
 		</p>
 
 

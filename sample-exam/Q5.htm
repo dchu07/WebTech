@@ -31,7 +31,39 @@
                 text-align: left;
             }
         </style>
-        <script>
+        <script type="text/javascript">
+            function add() {
+                let myForm = document.getElementById("form1");
+                let f = myForm.from.value;
+                let t = myForm.to.value;
+                let sum = 0;
+                if (myForm.types.value == "all") {
+                    for (let i = f; i <= t; i++) {
+                        sum += parseFloat(i);
+                    }
+                    document.getElementById("result").innerHTML = sum;
+                }
+                else if (myForm.types.value == "even") {
+                    for (let i = parseInt(from); i <= parseInt(to); i++) {
+                        if (i % 2 == 0) {
+                            sum += i;
+                        }
+                    }
+                    document.getElementById("result").innerHTML = sum;
+                }
+                else if (myForm.types.value == "odd") {
+                    for (let i = parseInt(from); i <= parseInt(to); i++) {
+                        if (i % 2 == 1) {
+                            sum += i;
+                        }
+                    }
+                    document.getElementById("result").innerHTML = sum;
+                }
+            
+                return false;
+            }
+            
+
 
         </script>
     </head>
@@ -50,16 +82,18 @@
         </p>
         <form id="form1">
             <p>
-                From: <input type="text" name="from" size="10" /> To: <input type="text" name="to" size="10">
+                From: <input type="text" name="from" size="10" />
+                To: <input type="text" name="to" size="10">
             </p>
             <p>
-                Please select (for extra points):<br><br> all integers<input type="radio" name="types" value="all"> even
-                numbers
-                <input type="radio" name="types" value="even"> odd numbers<input type="radio" name="types" value="odd"><br><br>
+                Please select (for extra points):<br><br>
+                all integers <input type="radio" name="types" value="all">
+                even numbers <input type="radio" name="types" value="even">
+                odd numbers<input type="radio" name="types" value="odd"><br><br>
 
             </p>
             <p>
-                <input type="submit" name="Sum" value="SUM">
+                <input onclick="return add()" type="submit" name="Sum" value="SUM">
                 <input type="reset" name="reset" value="CLEAR">
             </p>
             <p>The sum is <span id="result"></span>.</p>
