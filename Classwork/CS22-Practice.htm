@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset="UTF-8">
+        <title>Web Technologies - Your Name </title>
+
+        <style type="text/css">
+
+        #circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: red;
+            margin: 10px;
+        }
+        #square {
+            width: 150px;
+            height: 150px;
+            background-color: green;
+            margin: 10px;
+            text-align: center;
+        }
+        </style>
+
+        <script type="text/javascript">
+        $(document).ready(function() {
+            $("#cirlce").click(function() {
+                $("#circle").css("background-color", "blue");
+                $("#square").text("It's not me!");
+            });
+            
+        })
+        </script>
+
+</head>
+
+<body>
+
+    <div class="main">
+
+        <div id="circle"></div>
+
+        <div id="square"></div>
+
+    </div>
+
+</body>
+
+</html>
